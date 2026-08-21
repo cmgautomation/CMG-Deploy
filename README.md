@@ -12,26 +12,21 @@ It is published through GitHub Pages and acts as a static update server for auto
 Each CMG application has its own dedicated directory containing its deployment artifacts:
 ```
 CMG-deploy/
-├─ cmgNC/
+├─ cmgNC/                      # CNC control and geometry engine
 │   ├─ version.txt
 │   ├─ update.ini
 │   ├─ cmgNC-setup.exe
 │   ├─ patches/
 │   └─ changelog.md
 │
-├─ cmgModeling/
-│   ├─ version.txt
-│   ├─ cmgModeling-setup.exe
-│   └─ patches/
-│
-├─ cmgCAD/
-│   ├─ version.txt
-│   ├─ cmgCAD-setup.exe
-│   └─ patches/
-│
-└─ shared/
-    └─ common libraries or resources (optional)
+└─  FaberCAD/                   # Non‑parametric 3D CAD (work‑in‑progress)
+    ├─ version.txt
+    ├─ FaberCAD-setup.exe
+    ├─ patches/
+    └─ README.md               # Contains project description
+
 ```
+
 
 Code
 
