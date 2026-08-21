@@ -28,50 +28,6 @@ CMG-deploy/
 ```
 
 
-Code
-
-Each project folder is self‑contained and can be used independently by its corresponding updater.
-
----
-
-## 🌐 GitHub Pages Integration
-
-This repository is published via GitHub Pages and serves static files directly to CMG applications.
-
-Example endpoints:
-
-https://<username>.github.io/CMG-deploy/cmgNC/version.txt
-https://<username>.github.io/CMG-deploy/cmgNC/update.ini
-https://<username>.github.io/CMG-deploy/cmgNC/cmgNC-setup.exe
-
-Code
-
-These URLs are consumed by the automatic update system implemented in each CMG application.
-
----
-
-## 🔄 Versioning & Update Workflow
-
-Each project follows a simple and predictable update workflow:
-
-1. **Build a new release**  
-   Compile the application and generate the installer using Inno Setup.
-
-2. **Update version metadata**  
-   Modify `version.txt` with the new version number.  
-   Optionally update `update.ini` with download URLs or patch instructions.
-
-3. **Upload deployment artifacts**  
-   Place the installer, patch files, and changelog into the appropriate project folder.
-
-4. **Publish via GitHub Pages**  
-   GitHub Pages automatically serves the updated files.
-
-5. **Client auto‑update**  
-   CMG applications check the version file and download updates when available.
-
----
-
 ## 📦 Files Overview
 
 ### `version.txt`
@@ -79,8 +35,6 @@ Contains the current version number of the application.
 
 Example:
 1.0.3
-
-Code
 
 ### `update.ini`
 Defines update behavior for the client updater.  
@@ -106,13 +60,24 @@ Human‑readable release notes for each version.
 
 This repository currently supports deployment for:
 
-- **cmgNC** — CNC control and geometry engine
+
+### **cmgNC — CNC control and geometry engine**
+
+cmgNC is the operator interface for CNC machines driven by **FluidNC**.  
+It preprocesses **G‑code** before streaming it via USB to FluidNC, providing:
+
+- real‑time toolpath visualization  
+- solid and trajectory rendering in a lightweight 3D CAD viewer  
+- macro‑instruction support (**GCODE#**)  
+- geometry preprocessing and validation  
+
+Designed as a compact CNC front‑end, cmgNC combines G‑code analysis, visualization, and FluidNC integration in a single operator‑friendly environment.
+
 
 ### **FaberCAD — Non‑parametric 3D CAD (work‑in‑progress)**
 
 FaberCAD is a non‑parametric 3D CAD application developed as an experimental project.  
 It currently provides only basic functionality for solid visualization and manipulation, and is in a very early stage of development.
-
 
 
 ## 📜 License
