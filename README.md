@@ -10,27 +10,28 @@ It is published through GitHub Pages and acts as a static update server for auto
 ## 📁 Repository Structure
 
 Each CMG application has its own dedicated directory containing its deployment artifacts:
-
+```
 CMG-deploy/
 ├─ cmgNC/
-│    ├─ version.txt
-│    ├─ update.ini
-│    ├─ cmgNC-setup.exe
-│    ├─ patches/
-│    └─ changelog.md
+│   ├─ version.txt
+│   ├─ update.ini
+│   ├─ cmgNC-setup.exe
+│   ├─ patches/
+│   └─ changelog.md
 │
 ├─ cmgModeling/
-│    ├─ version.txt
-│    ├─ cmgModeling-setup.exe
-│    └─ patches/
+│   ├─ version.txt
+│   ├─ cmgModeling-setup.exe
+│   └─ patches/
 │
 ├─ cmgCAD/
-│    ├─ version.txt
-│    ├─ cmgCAD-setup.exe
-│    └─ patches/
+│   ├─ version.txt
+│   ├─ cmgCAD-setup.exe
+│   └─ patches/
 │
 └─ shared/
-└─ common libraries or resources (optional)
+    └─ common libraries or resources (optional)
+```
 
 Code
 
@@ -110,22 +111,14 @@ Human‑readable release notes for each version.
 
 This repository currently supports deployment for:
 
-- **cmgNC** — CNC control and geometry engine  
-- **cmgModeling** — modeling and CAD utilities  
-- **cmgCAD** — CAD visualization and processing tools  
+- **cmgNC** — CNC control and geometry engine
 
-Additional CMG applications can be added by creating new subdirectories following the same structure.
+### **FaberCAD — Non‑parametric 3D CAD (work‑in‑progress)**
 
----
+FaberCAD is a non‑parametric 3D CAD application developed as an experimental project.  
+It currently provides only basic functionality for solid visualization and manipulation, and is in a very early stage of development.
 
-## 🔧 Tools Used
 
-- **Inno Setup** — installer generation  
-- **Inno Updater / custom update logic** — automatic update system  
-- **GitHub Pages** — static hosting for deployment artifacts  
-- **GitHub Actions (optional)** — automated publishing and versioning
-
----
 
 ## 📜 License
 
